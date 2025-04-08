@@ -1,0 +1,27 @@
+const app = document.getElementById("app");
+
+const submitButton = document.createElement("button");
+submitButton.innerHTML = "Send USDT";
+
+const recipientInput = document.createElement("input");
+recipientInput.placeholder = "Recipient Address";
+
+const amountInput = document.createElement("input");
+amountInput.placeholder = "Amount (USDT)";
+amountInput.type = "number";
+
+app.appendChild(recipientInput);
+app.appendChild(amountInput);
+app.appendChild(submitButton);
+
+submitButton.addEventListener("click", () => {
+  const recipient = recipientInput.value;
+  const amount = amountInput.value;
+
+  if (recipient && amount) {
+    // Replace with your logic to send USDT
+    alert(`Sending ${amount} USDT to ${recipient}`);
+  } else {
+    alert("Please fill in both fields!");
+  }
+});
